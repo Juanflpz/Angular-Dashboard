@@ -15,4 +15,44 @@
             <p class="text-gray-700 mt-5">Content is hidden</p>
         }
     </div>
+
+    <div class="bg-white rounded shadow p-10">
+        <h2 class="text-3xl">{{grade()}}</h2>
+        @switch (grade()) {
+            @case ('A'){
+                <p>Arriba de 90</p>
+            }
+            @case ('B'){
+                <p>Arriba de 50</p>
+            }
+            @default{
+                <p>REPROBADO</p>
+            }
+        }
+    </div>
+
+    <div class="bg-white rounded shadow p-10">
+        <ul>
+            @for(f of frameworks(); track f; let i = $index, first = $first, last = $last, even = $even, odd = $odd, count = $count){
+                <li [class]="{
+                    'bg-red-100':even && !first && !last,
+                    'bg-pink-100':odd && !first && !last,
+                    'bg-blue-100':first || last,
+                }">
+                    {{i+1}}/{{count}} - {{f}}
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="bg-white rounded shadow p-10">
+        <ul>
+            @for(f of frameworks2(); track $index){
+                <li>{{f}}</li>
+            }
+            @empty {
+                <li>No hay frameworks</li>
+            }
+        </ul>
+    </div>
 </section>

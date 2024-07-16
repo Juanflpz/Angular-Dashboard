@@ -3,6 +3,25 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths":{
+      "@app/*": ["./src/app/*"],
+      "@env/*": ["./src/environments/*"],
+      "@core/*": ["./src/app/core/*"],
+      "@shared/*": ["./src/app/shared/*"],
+      "@features/*": ["./src/app/features/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@services/*": ["./src/app/services/*"],
+      "@models/*": ["./src/app/models/*"],
+      "@interceptors/*": ["./src/app/interceptors/*"],
+      "@guards/*": ["./src/app/guards/*"],
+      "@pipes/*": ["./src/app/pipes/*"],
+      "@directives/*": ["./src/app/directives/*"],
+      "@configs/*": ["./src/app/configs/*"],
+      "@mocks/*": ["./src/mocks/*"],
+      "@tests/*": ["./src/tests/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

@@ -13,9 +13,10 @@ import { TitleComponent } from '@app/shared/title/title.component';
       alt="Angular architecture guide"
       width="420"
       height="170"
+      style="view-transition-name: hero1"
       />
 
-      <div class="bg-blue-500 w-56 h-56">
+      <div class="bg-blue-500 w-56 h-56" style="view-transition-name: hero2">
 
       </div>
 
